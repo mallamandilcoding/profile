@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700&family=Montserrat:wght@300;400;700&display=swap');
+
+*{
+  padding:0;
+  margin:0;
+}
+
+body {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  box-sizing: border-box;
+  /* padding:0;
+  margin:0; */
+  background: rgb(84,5,117);
+  background: linear-gradient(90deg, rgba(84,5,117,1) 0%, rgba(221,39,7,1) 35%, rgba(8,168,219,1) 100%);
+}
+
+.main-container{
+  width: 60%;
+  margin:0 auto;
+  /* background-color: purple; */
+}
+
+.header img{
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50%;
+  transition: transform 1s;
+  animation-name: circular;
+  animation-duration: 3s;
+
+}
+
+.header img:hover{
+  transform: rotate(360deg);
+}
+
+h1,h2,h3{
+  color: #0a75ad;
+
+}
+
+h1,p{
+ margin: 15px 0;
+}
+
+.box-field{
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 10px rgb(0,0,0,0.4);
+  margin: 10px;
+  text-align: center;
+  padding:20px;
+  background-color: #c5cbe3;
+  animation-name: rotate-div;
+  animation-duration: 0.5s;
+  /* transform: rotateX(30deg); */
+  /* transition:4s; */
+}
+
+.btn-lightred{
+  display: inline-block;
+  padding:15px;
+  background-color: #DC0000;
+  width: 25%;
+  text-decoration: none;
+  color: white;
+  transition: all 1s;
+}
+
+.btn-lightred:hover{
+  background-color: #850000;
+}
+
+
+.social-links{
+  list-style: none;
+}
+
+.social-links li{
+  display: inline-block;
+}
+
+.social-links li a{
+  padding: 14px;
+  font-size: 50px;
+  color: #DC0000;
+  transition: color 1s;
+  text-decoration: none;
+}
+
+.social-links li a:hover{
+  color: #850000;
+}
+
+.social-box h2{
+  margin-bottom: 10px;
+}
+
+h1,h2,h3,p{
+  position: relative;
+  animation-name: left-animation;
+  animation-duration: 3s;
+}
+@keyframes left-animation {
+  0%   { left:-700px;}
+  100% { left:0px;}
+}
+
+.right-animate{
+  position: relative;
+  animation-name: right-animation;
+  animation-duration: 3s;
+}
+
+@keyframes right-animation {
+  0%   { right:-700px;}
+  100% { right:0px;}
+}
+
+@keyframes circular {
+  0%   { transform: rotatex(0deg);}
+  100% { transform: rotatex(360deg)}
+}
+
+@keyframes rotate-div {
+  0%   { transform: rotate(0deg);}
+  100% { transform: rotate(360deg)}
+}
+
+
+.shake{
+  transition: all 1s;
+}
+
+.shake:hover{
+  transform: scale(1.1);
+}
+
+/* animation-name: shake;
+animation-duration: 3s;
+animation-iteration-count: infinite; */
+
+/* @keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+} */
+
+
+@media (max-width: 700px) {
+
+  .btn-lightred{
+    width:80%;
+  }
+}
+
+
+@media (max-width: 530px) {
+
+   .social-links li a{
+    display: block;
+    background-color:#DC0000 ;
+    color: white;
+    margin-bottom: 10px;
+    transition: 1s;
+  }
+
+  .social-links li a:hover{
+     color: white;
+     background-color:#850000;
+
+  }
+
+}
